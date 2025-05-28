@@ -888,7 +888,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -904,7 +905,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -920,7 +922,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -936,7 +939,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -952,7 +956,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -968,7 +973,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -984,7 +990,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -1000,7 +1007,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -1016,7 +1024,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If
@@ -1032,7 +1041,8 @@ Public Class Form1
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
                 Catch ex As Exception
-
+                    Caine.Play("Sad")
+                    Caine.Speak("Aw shoot, I couldn't get rid of the malware.")
                 End Try
             Next
         End If

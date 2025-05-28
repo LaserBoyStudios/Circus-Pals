@@ -619,6 +619,25 @@ Public Class Form1
             Caine.Play("Blink")
             Caine.Speak("\Vol=65535\Alright, back to my regular script!")
         End If
+        If My.Settings.Name = "Kaumfo" Then
+            My.Settings.Name = Environment.UserName
+            Me.Text = "Welcome to The Amazing Digital Circus, " + My.Settings.Name + "!"
+            My.Settings.Save()
+            Caine.Play("Decline")
+            Caine.Speak("\Vol=65535\Sorry, but that name is already taken.")
+            Caine.Play("Silly")
+            Caine.Speak("\Vol=65535\You think just because he's gone means his name is for sale?")
+            Caine.Play("Blink")
+            Caine.Speak("\Vol=65535\Alright, back to my regular script!")
+        End If
+        If My.Settings.Name = "XDDCC" Then
+            Me.Text = "Welcome to The Amazing Digital Circus, " + My.Settings.Name + "!"
+            My.Settings.Save()
+            Caine.Play("Think")
+            Caine.Speak("\Vol=65535\Pretty odd that you would like to have that name!")
+            Caine.Play("Blink")
+            Caine.Speak("\Vol=65535\Alright, back to my regular script!")
+        End If
         If My.Settings.Name.Contains("Dylan") Or My.Settings.Name.Contains("dylan") Or My.Settings.Name.Contains("Breather") Or My.Settings.Name.Contains("breather") Then
             TimerOfDOOM.Start()
             Caine.StopAll()
@@ -856,6 +875,19 @@ Public Class Form1
         If URLTextBox.Text = "http://alexparr.net" OrElse URLTextBox.Text = "http://alexparr.net" Then
             Caine.Play("Alert")
             Caine.Speak("POTATO!")
+            Caine.Play("RestPose")
+        End If
+        If URLTextBox.Text = "http://kinitopet.com" OrElse URLTextBox.Text = "https://kinitopet.com" Then
+            Caine.Speak("A complete ripoff, but everybody wants one.")
+        End If
+        If URLTextBox.Text = "http://myspace.com" OrElse URLTextBox.Text = "https://myspace.com" Then
+            Caine.Play("Alert")
+            Caine.Speak("You gotta be old in order to know about this one!")
+            Caine.Play("RestPose")
+        End If
+        If URLTextBox.Text = "http://meta.com/quest" OrElse URLTextBox.Text = "https://meta.com/quest" Then
+            Caine.Play("Alert")
+            Caine.Speak("Great! Now you can come and join the crew in our awesome adventures and games!")
             Caine.Play("RestPose")
         End If
         Caine.Play("Search")

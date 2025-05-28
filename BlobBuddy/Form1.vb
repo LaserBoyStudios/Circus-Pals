@@ -667,19 +667,19 @@ Public Class Form1
             Caine.Play("Surprised")
             Caine.Height = 256
             Caine.Width = 256
-            Caine.Speak("\Vol=65535\Oh no what have you done! Good thing this is temporary! Alright, back to my regular script!")
+            Caine.Speak("\Vol=65535\\Pit=85\Oh no what have you done! Good thing this is temporary! \Pit=165\Alright, back to my regular script!")
         End If
         If My.Settings.Name.Equals("Small") Or My.Settings.Name.Equals("small") Then
             Caine.Play("Surprised")
             Caine.Height = 64
             Caine.Width = 64
-            Caine.Speak("\Vol=65535\Oh no what have you done! Good thing this is temporary! Alright, back to my regular script!")
+            Caine.Speak("\Vol=65535\\Pit=400\Oh no what have you done! Good thing this is temporary! \Pit=165\Alright, back to my regular script!")
         End If
         If My.Settings.Name.Equals("Gargantuan") Or My.Settings.Name.Equals("gargantuan") Then
             Caine.Play("Surprised")
             Caine.Height = 384
             Caine.Width = 384
-            Caine.Speak("\Vol=65535\Oh no what have you done! Good thing this is temporary! Alright, back to my regular script!")
+            Caine.Speak("\Vol=65535\\Pit=50\Oh no what have you done! Good thing this is temporary! \Pit=165\Alright, back to my regular script!")
         End If
         If My.Settings.Name.Contains("Crazy Dave") Or My.Settings.Name.Contains("crazy dave") Then
             Caine.Play("Think")
@@ -1431,7 +1431,7 @@ Public Class Form1
             Case 11
                 Caine.Speak("Well this is an interesting one, " + My.Settings.Name + "! Did you know that the invention of HDMI goes all the way back to 2002! Who knew that high definition existed for that long?")
             Case 12
-                Caine.Speak("Alrighty " + My.Settings.Name + ", here’s a fact for you.")
+                Caine.Speak("Alrighty " + My.Settings.Name + ", hereÂ’s a fact for you.")
                 Caine.Speak("Did you know that the Fairchild Channel F was the first game console to truly utilize game cartridges?")
                 Caine.Speak("\emp\Really makes you wonder if the Digital Circus runs through a floppy disk.")
             Case 13
@@ -1451,10 +1451,10 @@ Public Class Form1
                 Caine.Speak("Did you know that composite video was invented in 1954! Yes, you heard that right!")
                 Caine.Speak("And this whole time, I thought it was invented in the 80's!")
             Case 18
-                Caine.Speak("It’s learning time! Did you know that the Video Home System, more commonly known as VHS, was invented in 1976? It was the competitor to Betamax, and it ended up winning!")
+                Caine.Speak("ItÂ’s learning time! Did you know that the Video Home System, more commonly known as VHS, was invented in 1976? It was the competitor to Betamax, and it ended up winning!")
                 Caine.Speak("Go VHS!")
             Case 19
-                Caine.Speak("Did you know that the Atari 2600 was the first super popular game console? It wasn't \emp\ always like that, though. It didn't really gain popularity until the release of Space Invaders for the system, which is considered by many to be the ‘killer app’.")
+                Caine.Speak("Did you know that the Atari 2600 was the first super popular game console? It wasn't \emp\ always like that, though. It didn't really gain popularity until the release of Space Invaders for the system, which is considered by many to be the Â‘killer appÂ’.")
             Case 20
                 Caine.Speak("It's time for an amazing fact!")
                 Caine.Speak("Did you know that the DVD was invented in 1995? It didn't get an official release until a year later, though.")

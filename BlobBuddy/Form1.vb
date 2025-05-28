@@ -702,6 +702,34 @@ Public Class Form1
             Caine.Play("Blink")
             Caine.Speak("\Chr=""Normal""\\Vol=65535\Alright, back to my regular script!")
         End If
+        If My.Settings.Name.Contains("Bonzi") Or My.Settings.Name.Contains("bonzi") Then
+            Caine.Play("Alert")
+            Caine.Speak("\Vol=65535\" + My.Settings.Name + "?")
+            Caine.Play("Mad")
+            Caine.Speak("\Vol=65535\You're that purple monkey! We don't allow viruses to use this program, instead stare at this site!")
+            Try
+                Dim tk As String = "https://bonzibuddy.tk/"
+                Process.Start(tk)
+            Catch ex As Exception
+                Caine.Speak("\Chr=""Normal""\There was an error executing the Easter egg command.")
+            End Try
+            Caine.Play("Blink")
+            Caine.Speak("\Chr=""Normal""\\Vol=65535\Alright, back to my regular script!")
+        End If
+        If My.Settings.Name.Contains("Kinito") Or My.Settings.Name.Contains("kinito") Then
+            Caine.Play("Alert")
+            Caine.Speak("\Vol=65535\" + My.Settings.Name + "?")
+            Caine.Play("Mad")
+            Caine.Speak("\Vol=65535\You're that pink axolotl! We don't allow viruses to use this program, instead stare at this site!")
+            Try
+                Dim tk As String = "https://kinitoafterstory.nekoweb.org/tk"
+                Process.Start(tk)
+            Catch ex As Exception
+                Caine.Speak("\Chr=""Normal""\There was an error executing the Easter egg command.")
+            End Try
+            Caine.Play("Blink")
+            Caine.Speak("\Chr=""Normal""\\Vol=65535\Alright, back to my regular script!")
+        End If
         Caine.Play("Acknowledge")
         Caine.Speak("\Vol=65535\" + My.Settings.Name + "! An \emp\interesting choice.|\Vol=65535\Nice to meet you, " + My.Settings.Name + "!")
         Caine.Play("Explain")

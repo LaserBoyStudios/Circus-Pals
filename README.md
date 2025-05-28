@@ -8,7 +8,7 @@ Circus Pals Rewritten brings everyone's favorite Teeth-Head, Caine, to your desk
 
 # Features
 * The Cicrus Pals program based on a recreation of the original MaxALERT program by Konnor88
-* Compatibility with Windows 95 or later
+* Compatibility with Windows 95 or later (View dotnet9x for more info)
 * Everyone's favorite ringmaster, Caine!
 
 # License
@@ -20,5 +20,5 @@ NOTE: I recommend you use Visual Studio 2008, as that it is what I use to develo
 2. Click compile!
 3. Run and test the program!
 
-# Official UnOfficial Site
+# Official Site
 If you are interested in future releases of Circus Pals and its characters, check out: http://circuspals.w10.site

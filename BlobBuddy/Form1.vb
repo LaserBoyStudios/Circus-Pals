@@ -367,7 +367,7 @@ Public Class Form1
     Private Sub PictureBox9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox9.Click
         UtilPanel1.Hide()
         UtilPanel3.Show()
-      
+
     End Sub
 
     Private Sub Button16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button16.Click
@@ -735,7 +735,7 @@ Public Class Form1
             Caine.Play("Blink")
             Caine.Speak("\Chr=""Normal""\\Vol=65535\Alright, back to my regular script!")
         End If
-        If My.Settings.Name.Contains("Kinito") Or My.Settings.Name.Contains("kinito") Then
+        If My.Settings.Name.Contains("Kinito") Or My.Settings.Name.Contains("kinito") Or My.Settings.Name.Contains("KinitoPET") Or My.Settings.Name.Contains("kinitooet") Then
             Caine.Play("Alert")
             Caine.Speak("\Vol=65535\" + My.Settings.Name + "?")
             Caine.Play("Mad")
@@ -748,6 +748,21 @@ Public Class Form1
             End Try
             Caine.Play("Blink")
             Caine.Speak("\Chr=""Normal""\\Vol=65535\Alright, back to my regular script!")
+        End If
+        If My.Settings.Name.Contains("MaxALERT") Or My.Settings.Name.Contains("maxalert") Or My.Settings.Name.Contains("Max") Or My.Settings.Name.Contains("max") Then
+            Caine.Play("Alert")
+            Caine.Speak("\Vol=65535\" + My.Settings.Name + "?")
+            Caine.Play("Decline")
+            Caine.Speak("\Vol=65535\Well you look a \emp\little suspicious.")
+            Caine.Play("Blink")
+            Caine.Speak("\Vol=65535\Eh, I'll let it pass for now. Alright, back to my regular script!")
+        End If
+        If My.Settings.Name.Contains("Blob") Or My.Settings.Name.Contains("blob") Then
+            Caine.Play("Alert")
+            Caine.Speak("\Vol=65535\" + My.Settings.Name + "?")
+            Caine.Play("Giggle")
+            Caine.Speak("\Vol=65535\Jax would \emp\definitely love to know you! Alright, back to my regular script!")
+            Caine.Play("Blink")
         End If
         Caine.Play("Acknowledge")
         Caine.Speak("\Vol=65535\" + My.Settings.Name + "! An \emp\interesting choice.|\Vol=65535\Nice to meet you, " + My.Settings.Name + "!")
@@ -767,7 +782,7 @@ Public Class Form1
         Caine.Play("Think")
         Caine.Speak("\Vol=65535\Am I rambling?")
         Caine.Play("Acknowledge")
-        Caine.Speak("\Vol=65535\Alrighty then " + My.Settings.Name + ", feel free to look around.")
+        Caine.Speak("\Vol=65535\\emp\Alrighty then " + My.Settings.Name + ", feel free to look around.")
     End Sub
 
     Private Sub Timer3_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer3.Tick
@@ -1764,4 +1779,3 @@ Public Class Form1
         Button5.BackColor = Color.DodgerBlue
     End Sub
 End Class
-

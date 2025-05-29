@@ -16,11 +16,14 @@ This source code is licensed under the Mozilla Public License 2.0. By using this
 
 # Compile Instructions
 ==Main and Wacky Book==
+
 NOTE: I recommend you use Visual Studio 2008, as that it is what I use to develop.
 1. Open the solution file.
 2. Click compile!
 3. Run and test the program!
+
 ==Gloinks game==
+
 NOTE: I recommend you use The Games Factory, as that it is what I use to develop.
 1. Open the .gam file
 2. Click save as standalone game!

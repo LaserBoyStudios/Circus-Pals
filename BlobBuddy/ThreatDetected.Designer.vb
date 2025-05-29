@@ -75,14 +75,14 @@ Partial Class ThreatDetected
         '
         'Button1
         '
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Image = Global.CircusPals.My.Resources.Resources.lb_bluebg
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button1.Location = New System.Drawing.Point(111, 182)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ThreatDetected
         '

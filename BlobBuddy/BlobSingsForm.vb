@@ -1,108 +1,97 @@
 ﻿Imports System.IO
+Imports System.Diagnostics
+Imports System.Windows.Forms
 Public Class BlobSingsForm
     Private filePaths As New Dictionary(Of String, String)
     Private customNames As New Dictionary(Of String, String)
     Private Sub BlobSingsForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Form1.Caine.Stop()
         Dim num As Integer = MyBase.Location.X - 20
         Dim num2 As Integer = MyBase.Location.Y - 120
         Form1.Caine.MoveTo(CShort(num), CShort(num2))
-        Dim directory1 As String = "C:\Program Files (x86)\BellCraft.com\MASH"
-        Dim directory2 As String = "C:\Program Files\BellCraft.com\MASH"
-
-        If Directory.Exists(directory1) Or Directory.Exists(directory2) Then
-            ' Either directory exists, continue loading the form
-        Else
-            ' If the user doesn't have MASH, show message box
-            Form1.Caine.Play("Surprised")
-            Form1.Caine.Speak("Gasp! My program almost crashed! Is MASH installed properly?")
-            Form1.Caine.Play("Blink")
-            Dim result As DialogResult = MessageBox.Show("The Microsoft Agent Scripting Helper from Bellcraft.com is not installed. Would you like to install it now?", "Installation Required", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If result = DialogResult.Yes Then
-                ' Launch the installer or provide instructions
-                ' You can modify this to launch an installer if needed
-                Dim mash As String = String.Format("{0}\\Runtimes\\mash_full_setup.exe", Environment.CurrentDirectory)
-                If Directory.Exists(mash) Then
-                    Process.Start(mash)
-                Else
-                    MessageBox.Show("Please visit Bellcraft.com to download and install the Microsoft Agent Scripting Helper.", "Installation Needed", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                End If
-            End If
-            Me.Close()
-        End If
-        ' Defines the path to /blobsings/ 
-        Dim directoryPath As String = Path.Combine(Application.StartupPath, "cainesongs")
-
-        ' Defines custom display names for specific files
-        customNames.Add("daisydaisy.msh", "Daisy Bell - Harry Dare")
-        customNames.Add("deltarune.msh", "Don't Forget - Toby Foxx")
-        customNames.Add("hellomababy.msh", "Hello Ma Baby - Joe Howard")
-        customNames.Add("partingglass.msh", "The Parting Glass - Unknown")
-        customNames.Add("risingmoon.msh", "Rising of the Moon - John Keegan Casey")
-        customNames.Add("singintherain.msh", "Singing in the Rain - Arthur Freed")
-        customNames.Add("tadc.msh", "Main Theme - Gooseworx")
-        customNames.Add("wellerman.msh", "Wellerman - Unknown")
-
-        ' Check if the directory exists
-        If Directory.Exists(directoryPath) Then
-            ' Gets all files in the specified path
-            Dim files As String() = Directory.GetFiles(directoryPath)
-
-            ' Adds each file name to the ListBox and keep track of the full paths
-            For Each filePath As String In files
-                Dim fileName As String = Path.GetFileName(filePath)
-                Dim displayName As String
-                If customNames.ContainsKey(fileName) Then
-                    displayName = customNames(fileName)
-                Else
-                    displayName = fileName
-                End If
-                ListBox1.Items.Add(displayName)
-                filePaths.Add(displayName, filePath)
-            Next
-        Else
-            Form1.Caine.Play("Surprised")
-            Form1.Caine.Speak("Gasp! My program almost crashed! Can you report the error to \ctx=""Email""\circuspals@w10.site?")
-            Form1.Caine.Play("Blink")
-            MessageBox.Show("The specified directory does not exist.")
-        End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        ' Checking if an item is selected
-        If ListBox1.SelectedIndex >= 0 Then
-            ' Get the display name of the selected item
-            Dim selectedDisplayName As String = ListBox1.SelectedItem.ToString()
+        SingIntro()
 
-            ' Using this to grab the full path of the selected file using the display name
-            If filePaths.ContainsKey(selectedDisplayName) Then
-                Dim selectedFilePath As String = filePaths(selectedDisplayName)
-
-                ' Launches the file
-                Try
-                    Process.Start(selectedFilePath)
-                Catch ex As Exception
-                    Form1.Caine.Play("Surprised")
-                    Form1.Caine.Speak("Gasp! My program almost crashed! Can you report the error to \ctx=""Email""\circuspals@w10.site?")
-                    Form1.Caine.Play("Blink")
-                    MessageBox.Show("Error launching file: " & ex.Message)
-                End Try
-            End If
-        End If
+        Select Case CaineSongList.SelectedItems(0).Text
+            Case "Daisy Bell"
+                Form1.SingMain(1)
+                Exit Select
+            Case "Hello Ma Baby"
+                Form1.SingMain(2)
+                Exit Select
+            Case "Cindy"
+                Form1.SingMain(3)
+                Exit Select
+            Case "In My Merry Oldsmobile"
+                Form1.SingMain(4)
+                Exit Select
+            Case "Oh, Dem Golden Slippers"
+                Form1.SingMain(5)
+                Exit Select
+            Case "Rising of the Moon"
+                Form1.SingMain(6)
+                Exit Select
+            Case "In The Good Old Summertime"
+                Form1.SingMain(7)
+                Exit Select
+            Case "Beautiful Dreamer"
+                Form1.SingMain(8)
+                Exit Select
+            Case "Twinkle Twinkle Little Star"
+                Form1.SingMain(9)
+                Exit Select
+            Case "Long, Long Ago"
+                Form1.SingMain(10)
+                Exit Select
+            Case "Ida"
+                Form1.SingMain(11)
+                Exit Select
+            Case "Where Did You Get That Hat"
+                Form1.SingMain(12)
+                Exit Select
+            Case "I've Been Working On the Railroad"
+                Form1.SingMain(13)
+                Exit Select
+            Case "My Wild Irish Rose"
+                Form1.SingMain(14)
+                Exit Select
+            Case "Meet Me In St Louis, Louis"
+                Form1.SingMain(15)
+                Exit Select
+            Case "Sidewalks of New York"
+                Form1.SingMain(16)
+                Exit Select
+            Case "The Man On the Flying Trapeze"
+                Form1.SingMain(17)
+                Exit Select
+            Case "Over the River and Through the Woods"
+                Form1.SingMain(18)
+                Exit Select
+            Case "Blue-Tail Fly"
+                Form1.SingMain(19)
+                Exit Select
+            Case "Mighty Lak' A Rose"
+                Form1.SingMain(20)
+            Case "Don't Forget"
+                Form1.SingMain(21)
+            Case "Parting Glass"
+                Form1.SingMain(22)
+            Case "Singin' in the Rain"
+                Form1.SingMain(23)
+            Case "Main Theme"
+                Form1.SingMain(24)
+            Case "Wellerman"
+                Form1.SingMain(25)
+                Exit Select
+        End Select
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Form1.Caine.StopAll()
+        Form1.Caine.Speak("\Chr=""Normal""\")
         Form1.Caine.Play("Blink")
-    End Sub
-
-    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
-        Dim webAddress As String = "https://bellcraft.com/mash"
-        Process.Start(webAddress)
-    End Sub
-
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
-        Dim webAddress As String = "https://tmafe.com/museum/mush"
-        Process.Start(webAddress)
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
@@ -115,12 +104,32 @@ Public Class BlobSingsForm
         Form1.Caine.Speak("Having trouble? Let me help you.")
         Form1.Caine.Play("Explain")
         Form1.Caine.Speak("From this screen, I can sing any song you like. Simply select the song from the list and click on the Sing button.")
-        Form1.Caine.Speak("You can \emp\also make your own custom songs in \Map=""Mash""=""MASH""\ or \Map=""Mush""=""MUSH""\ and place them in the \Map=""caine songs""=""""cainesongs""""\ folder in the root.")
-        Form1.Caine.Play("Decline")
-        Form1.Caine.Speak("Oh and remember " + My.Settings.Name + ", keep it clean, cause the filter isn't working at the moment.")
         Form1.Caine.Play("Acknowledge")
     End Sub
     Private Sub BlobSingsForm_Close(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.FormClosed
         Form1.Caine.MoveTo(320, 240)
+    End Sub
+
+    Private Sub SingIntro()
+        Dim rnd = New Random()
+
+        Select Case rnd.Next(1, 4)
+            Case 1
+                Form1.Caine.Play("Explain")
+                Form1.Caine.Speak("Here's one Queenie used to sing to Kinger. I hope you like it.")
+                Form1.Caine.Play("FastExplain")
+                Form1.Caine.Balloon.Style = &H31C000D
+                Exit Select
+            Case 2
+                Form1.Caine.Play("Explain")
+                Form1.Caine.Speak("OK, here goes.")
+                Form1.Caine.Play("FastExplain")
+                Form1.Caine.Balloon.Style = &H31C000D
+                Exit Select
+            Case 3
+                Form1.Caine.Play("FastExplain")
+                Form1.Caine.Balloon.Style = &H31C000D
+                Exit Select
+        End Select
     End Sub
 End Class

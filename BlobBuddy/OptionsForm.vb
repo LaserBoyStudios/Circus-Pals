@@ -17,7 +17,7 @@
             My.Settings.Name = "User"
             My.Settings.Theme = 2
             Form1.BackgroundImage = My.Resources.CircusBackground
-            Form1.Label2.Show()
+            Form1.Label2.Hide()
             My.Settings.is64bit = 2
             My.Settings.Save()
             My.Settings.InteractHelp = False
@@ -44,21 +44,16 @@
         End If
         If RadioButton4.Checked = True Then
             Form1.Label2.Show()
-            Form1.ComputerUpdate.Show()
-            Form1.BackgroundImage = My.Resources.computerbg2
-            Form1.JungleUpdate.Hide()
+            Form1.BackgroundImage = My.Resources.PomniBackground
             Form1.ComputerBackgroundOptimizer.Show()
             Form1.JungleBGModule.Hide()
             My.Settings.Theme = 1
             My.Settings.Save()
         Else
-            Form1.ComputerUpdate.Hide()
-            Form1.JungleUpdate.Show()
             Form1.BackgroundImage = My.Resources.CircusBackground
             Form1.ComputerBackgroundOptimizer.Hide()
             Form1.JungleBGModule.Show()
             Form1.Label2.Hide()
-
             My.Settings.Theme = 2
             My.Settings.Save()
         End If
@@ -218,9 +213,7 @@
     Private Sub CheckBox4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox4.CheckedChanged
         If CheckBox4.Checked Then
             My.Settings.InteractHelp = True
-            Form1.Caine.Play("Pleased")
-            Form1.Caine.Speak("You want my help again? That is amazing!|That's the spirit!")
-            Form1.Caine.Play("Blink")
+            Form1.Caine.Play("Acknowledge")
             My.Settings.Save()
         Else
             My.Settings.InteractHelp = False

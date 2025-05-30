@@ -59,6 +59,7 @@ Partial Class OptionsForm
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
@@ -71,6 +72,7 @@ Partial Class OptionsForm
         Me.GroupBox1.Controls.Add(Me.RadioButton2_3)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(200, 98)
@@ -81,6 +83,7 @@ Partial Class OptionsForm
         'RadioButton2_3
         '
         Me.RadioButton2_3.AutoSize = True
+        Me.RadioButton2_3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.RadioButton2_3.Location = New System.Drawing.Point(6, 65)
         Me.RadioButton2_3.Name = "RadioButton2_3"
         Me.RadioButton2_3.Size = New System.Drawing.Size(72, 17)
@@ -91,6 +94,7 @@ Partial Class OptionsForm
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.RadioButton2.Location = New System.Drawing.Point(6, 42)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(66, 17)
@@ -102,6 +106,7 @@ Partial Class OptionsForm
         '
         Me.GroupBox2.Controls.Add(Me.RadioButton3)
         Me.GroupBox2.Controls.Add(Me.RadioButton4)
+        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.GroupBox2.Location = New System.Drawing.Point(12, 116)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(200, 74)
@@ -112,6 +117,7 @@ Partial Class OptionsForm
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.RadioButton3.Location = New System.Drawing.Point(6, 19)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(95, 17)
@@ -122,16 +128,18 @@ Partial Class OptionsForm
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.RadioButton4.Location = New System.Drawing.Point(6, 42)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(70, 17)
+        Me.RadioButton4.Size = New System.Drawing.Size(92, 17)
         Me.RadioButton4.TabIndex = 0
-        Me.RadioButton4.Text = "Computer"
+        Me.RadioButton4.Text = "Pomni's Room"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label1.Location = New System.Drawing.Point(17, 323)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
@@ -149,6 +157,7 @@ Partial Class OptionsForm
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CheckBox1.Location = New System.Drawing.Point(16, 276)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(77, 17)
@@ -170,6 +179,7 @@ Partial Class OptionsForm
         '
         Me.GroupBox3.Controls.Add(Me.RadioButton32)
         Me.GroupBox3.Controls.Add(Me.RadioButton64)
+        Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.GroupBox3.Location = New System.Drawing.Point(12, 196)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(81, 74)
@@ -180,6 +190,7 @@ Partial Class OptionsForm
         'RadioButton32
         '
         Me.RadioButton32.AutoSize = True
+        Me.RadioButton32.ForeColor = System.Drawing.SystemColors.ControlText
         Me.RadioButton32.Location = New System.Drawing.Point(6, 42)
         Me.RadioButton32.Name = "RadioButton32"
         Me.RadioButton32.Size = New System.Drawing.Size(51, 17)
@@ -190,6 +201,7 @@ Partial Class OptionsForm
         'RadioButton64
         '
         Me.RadioButton64.AutoSize = True
+        Me.RadioButton64.ForeColor = System.Drawing.SystemColors.ControlText
         Me.RadioButton64.Location = New System.Drawing.Point(6, 19)
         Me.RadioButton64.Name = "RadioButton64"
         Me.RadioButton64.Size = New System.Drawing.Size(51, 17)
@@ -203,6 +215,7 @@ Partial Class OptionsForm
         Me.GroupBox4.Controls.Add(Me.Label4)
         Me.GroupBox4.Controls.Add(Me.Label3)
         Me.GroupBox4.Controls.Add(Me.RandomTalkBar)
+        Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.GroupBox4.Location = New System.Drawing.Point(99, 196)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(113, 74)
@@ -213,6 +226,7 @@ Partial Class OptionsForm
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label5.Location = New System.Drawing.Point(77, 52)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(30, 13)
@@ -222,6 +236,7 @@ Partial Class OptionsForm
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label4.Location = New System.Drawing.Point(41, 52)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(30, 13)
@@ -231,6 +246,7 @@ Partial Class OptionsForm
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label3.Location = New System.Drawing.Point(5, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(30, 13)
@@ -250,6 +266,7 @@ Partial Class OptionsForm
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CheckBox2.Location = New System.Drawing.Point(102, 276)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(119, 17)
@@ -260,6 +277,7 @@ Partial Class OptionsForm
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CheckBox3.Location = New System.Drawing.Point(16, 297)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(109, 17)
@@ -269,49 +287,53 @@ Partial Class OptionsForm
         '
         'Button1
         '
-        Me.Button1.BackgroundImage = Global.CircusPals.My.Resources.Resources.darkbg
-        Me.Button1.Image = Global.CircusPals.My.Resources.Resources.lb_bluebg
+        Me.Button1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button1.Location = New System.Drawing.Point(143, 350)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Apply"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'AgentAdButton
         '
-        Me.AgentAdButton.BackgroundImage = Global.CircusPals.My.Resources.Resources.lb_bluebg
+        Me.AgentAdButton.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.AgentAdButton.ForeColor = System.Drawing.SystemColors.ControlText
         Me.AgentAdButton.Image = Global.CircusPals.My.Resources.Resources.agent_icon
         Me.AgentAdButton.Location = New System.Drawing.Point(102, 345)
         Me.AgentAdButton.Name = "AgentAdButton"
         Me.AgentAdButton.Size = New System.Drawing.Size(32, 32)
         Me.AgentAdButton.TabIndex = 12
-        Me.AgentAdButton.UseVisualStyleBackColor = True
+        Me.AgentAdButton.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackgroundImage = Global.CircusPals.My.Resources.Resources.lb_bluebg
+        Me.Button3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button3.Location = New System.Drawing.Point(158, -6)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(71, 23)
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "Default"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         Me.Button3.Visible = False
         '
         'Button2
         '
-        Me.Button2.Image = Global.CircusPals.My.Resources.Resources.lb_bluebg
+        Me.Button2.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button2.Location = New System.Drawing.Point(18, 350)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Reset..."
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CheckBox4.Location = New System.Drawing.Point(125, 297)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(87, 17)
@@ -324,7 +346,7 @@ Partial Class OptionsForm
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Green
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(228, 383)
         Me.Controls.Add(Me.CheckBox4)
         Me.Controls.Add(Me.AgentAdButton)

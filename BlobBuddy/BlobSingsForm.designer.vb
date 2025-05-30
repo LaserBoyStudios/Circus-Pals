@@ -23,29 +23,49 @@ Partial Class BlobSingsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BlobSingsForm))
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Beautiful Dreamer", "Stephen Collins Foster"}, -1)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Blue-Tail Fly", "Dan Emmett"}, -1)
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cindy", "Tranditional"}, -1)
+        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Daisy Bell", "Harry Dare"}, -1)
+        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Don't Forget", "Toby Foxx"}, -1)
+        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Hello Ma Baby", "Joe Howard"}, -1)
+        Dim ListViewItem7 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"I've Been Working On the Railroad", "Unknown"}, -1)
+        Dim ListViewItem8 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Ida", "Eddie Leonard"}, -1)
+        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"In My Merry Oldsmobile", "Vincent Bryan and Gus Edwards"}, -1)
+        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"In The Good Old Summertime", "George Evans and Ren Shields"}, -1)
+        Dim ListViewItem11 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Long, Long Ago", "Thomas Haynes Bayly"}, -1)
+        Dim ListViewItem12 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Main Theme", "Gooseworx"}, -1)
+        Dim ListViewItem13 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Meet Me In St Louis, Louis", "Andrew B. Sterling and Kerry Mills"}, -1)
+        Dim ListViewItem14 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Mighty Lak' A Rose", "Frank L. Stanton and Ethelbert Nevin"}, -1)
+        Dim ListViewItem15 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"My Wild Irish Rose", "Chancellor John Olcott"}, -1)
+        Dim ListViewItem16 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Oh, Dem Golden Slippers", "James Bland"}, -1)
+        Dim ListViewItem17 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Over the River and Through the Woods", "Tranditional"}, -1)
+        Dim ListViewItem18 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Parting Glass", "Tranditional"}, -1)
+        Dim ListViewItem19 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Rising of the Moon", "John Keegan Casey"}, -1)
+        Dim ListViewItem20 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Sidewalks of New York", "Charles Lawlor"}, -1)
+        Dim ListViewItem21 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Singin' in the Rain", "Arthur Freed"}, -1)
+        Dim ListViewItem22 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"The Man On the Flying Trapeze", "George Leybourne and Alfred Lee"}, -1)
+        Dim ListViewItem23 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Twinkle Twinkle Little Star", "Jane Taylor and Ann Taylor"}, -1)
+        Dim ListViewItem24 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Wellerman", "Tranditional"}, -1)
+        Dim ListViewItem25 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Where Did You Get That Hat", "Joesph J. Sullivan"}, -1)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.ListBox1 = New System.Windows.Forms.ListBox
         Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button4 = New System.Windows.Forms.Button
         Me.Logo = New System.Windows.Forms.PictureBox
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
         Me.Label4 = New System.Windows.Forms.Label
+        Me.SongTitlesColumn = New System.Windows.Forms.ColumnHeader
+        Me.SongAuthorsColumn = New System.Windows.Forms.ColumnHeader
+        Me.CaineSongList = New System.Windows.Forms.ListView
         Me.GroupBox1.SuspendLayout()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.ListBox1)
+        Me.GroupBox1.Controls.Add(Me.CaineSongList)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 72)
         Me.GroupBox1.Name = "GroupBox1"
@@ -53,23 +73,6 @@ Partial Class BlobSingsForm
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Circus Pals Playlist..."
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(163, 1)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(224, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "More songs will be available in future updates!"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(6, 19)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(383, 160)
-        Me.ListBox1.TabIndex = 0
         '
         'Label1
         '
@@ -79,15 +82,6 @@ Partial Class BlobSingsForm
         Me.Label1.Size = New System.Drawing.Size(125, 13)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Songs made with MASH!"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 350)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(264, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "NOTE: Caine Sings uses MASHPlay to play the songs!"
         '
         'Button3
         '
@@ -118,26 +112,6 @@ Partial Class BlobSingsForm
         Me.Logo.Size = New System.Drawing.Size(129, 52)
         Me.Logo.TabIndex = 9
         Me.Logo.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(106, 312)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(88, 31)
-        Me.PictureBox2.TabIndex = 6
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 312)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(88, 31)
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
         '
         'Button2
         '
@@ -177,6 +151,30 @@ Partial Class BlobSingsForm
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Simply select the song from the list and click the Sing button."
         '
+        'SongTitlesColumn
+        '
+        Me.SongTitlesColumn.Text = "Titles"
+        Me.SongTitlesColumn.Width = 185
+        '
+        'SongAuthorsColumn
+        '
+        Me.SongAuthorsColumn.Text = "Authors"
+        Me.SongAuthorsColumn.Width = 220
+        '
+        'CaineSongList
+        '
+        Me.CaineSongList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.SongTitlesColumn, Me.SongAuthorsColumn})
+        Me.CaineSongList.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.CaineSongList.GridLines = True
+        Me.CaineSongList.HideSelection = False
+        Me.CaineSongList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9, ListViewItem10, ListViewItem11, ListViewItem12, ListViewItem13, ListViewItem14, ListViewItem15, ListViewItem16, ListViewItem17, ListViewItem18, ListViewItem19, ListViewItem20, ListViewItem21, ListViewItem22, ListViewItem23, ListViewItem24, ListViewItem25})
+        Me.CaineSongList.Location = New System.Drawing.Point(6, 19)
+        Me.CaineSongList.Name = "CaineSongList"
+        Me.CaineSongList.Size = New System.Drawing.Size(383, 160)
+        Me.CaineSongList.TabIndex = 0
+        Me.CaineSongList.UseCompatibleStateImageBehavior = False
+        Me.CaineSongList.View = System.Windows.Forms.View.Details
+        '
         'BlobSingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -187,10 +185,7 @@ Partial Class BlobSingsForm
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
@@ -203,25 +198,20 @@ Partial Class BlobSingsForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sing Caine, Sing!"
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Logo As System.Windows.Forms.PictureBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Private WithEvents SongTitlesColumn As System.Windows.Forms.ColumnHeader
+    Private WithEvents SongAuthorsColumn As System.Windows.Forms.ColumnHeader
+    Private WithEvents CaineSongList As System.Windows.Forms.ListView
 End Class

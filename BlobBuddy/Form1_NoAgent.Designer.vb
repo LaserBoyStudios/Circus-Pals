@@ -1,5 +1,5 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Form1_NoAgent
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -59,13 +59,12 @@ Partial Class Form1
         Me.PictureBox5 = New System.Windows.Forms.PictureBox
         Me.SpeakPic = New System.Windows.Forms.PictureBox
         Me.TabPage3 = New System.Windows.Forms.TabPage
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton
-        Me.Label1 = New System.Windows.Forms.Label
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.RedditButt = New System.Windows.Forms.Button
+        Me.Face_Booked = New System.Windows.Forms.Button
+        Me.Button23 = New System.Windows.Forms.Button
+        Me.Button21 = New System.Windows.Forms.Button
+        Me.Label6 = New System.Windows.Forms.Label
         Me.Label26 = New System.Windows.Forms.Label
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
@@ -112,7 +111,6 @@ Partial Class Form1
         Me.Label21 = New System.Windows.Forms.Label
         Me.WackyWatch = New System.Windows.Forms.PictureBox
         Me.ReturnToSpot = New System.Windows.Forms.Timer(Me.components)
-        Me.AxAgent1 = New AxAgentObjects.AxAgent
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -129,7 +127,6 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpeakPic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ExitToolStripMenu.SuspendLayout()
         CType(Me.MashButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,7 +137,6 @@ Partial Class Form1
         Me.UtilPanel1.SuspendLayout()
         Me.UtilPanel3.SuspendLayout()
         CType(Me.WackyWatch, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AxAgent1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -375,7 +371,6 @@ Partial Class Form1
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
         Me.Label22.Location = New System.Drawing.Point(127, 208)
@@ -478,7 +473,6 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(120, 96)
@@ -610,121 +604,106 @@ Partial Class Form1
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.TabPage3.BackgroundImage = Global.CircusPals.My.Resources.Resources.CaineBG
         Me.TabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.TabPage3.Controls.Add(Me.GroupBox3)
+        Me.TabPage3.Controls.Add(Me.PictureBox1)
+        Me.TabPage3.Controls.Add(Me.RedditButt)
+        Me.TabPage3.Controls.Add(Me.Face_Booked)
+        Me.TabPage3.Controls.Add(Me.Button23)
+        Me.TabPage3.Controls.Add(Me.Button21)
+        Me.TabPage3.Controls.Add(Me.Label6)
+        Me.TabPage3.Controls.Add(Me.Label26)
+        Me.TabPage3.Controls.Add(Me.TextBox1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(399, 228)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Share me with Friends"
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox3.Controls.Add(Me.RadioButton4)
-        Me.GroupBox3.Controls.Add(Me.RadioButton3)
-        Me.GroupBox3.Controls.Add(Me.RadioButton2)
-        Me.GroupBox3.Controls.Add(Me.RadioButton1)
-        Me.GroupBox3.Controls.Add(Me.Label1)
-        Me.GroupBox3.Controls.Add(Me.PictureBox1)
-        Me.GroupBox3.Controls.Add(Me.Label26)
-        Me.GroupBox3.Controls.Add(Me.TextBox1)
-        Me.GroupBox3.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 3)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(388, 220)
-        Me.GroupBox3.TabIndex = 0
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Share Me with Friends and Loved Ones..."
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(200, 96)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(75, 17)
-        Me.RadioButton4.TabIndex = 19
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "WhatsApp"
-        Me.RadioButton4.UseVisualStyleBackColor = True
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(122, 96)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(62, 17)
-        Me.RadioButton3.TabIndex = 18
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Bluesky"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(200, 73)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(56, 17)
-        Me.RadioButton2.TabIndex = 17
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Reddit"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(122, 73)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(54, 17)
-        Me.RadioButton1.TabIndex = 16
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "E-Mail"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label1.Location = New System.Drawing.Point(25, 17)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(334, 39)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "This page will allow you to share me with friends and loved ones! I will" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "send an" & _
-            " email or post on your behalf allowing your friends and loved" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ones to download " & _
-            "little old me for FREE!"
-        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.CircusPals.My.Resources.Resources.CaineShare
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Location = New System.Drawing.Point(165, 115)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.CircusPals.My.Resources.Resources.CaineShare
+        Me.PictureBox1.Location = New System.Drawing.Point(151, 85)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 78)
-        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.Size = New System.Drawing.Size(84, 128)
+        Me.PictureBox1.TabIndex = 11
         Me.PictureBox1.TabStop = False
+        '
+        'RedditButt
+        '
+        Me.RedditButt.ForeColor = System.Drawing.Color.White
+        Me.RedditButt.Image = CType(resources.GetObject("RedditButt.Image"), System.Drawing.Image)
+        Me.RedditButt.Location = New System.Drawing.Point(238, 56)
+        Me.RedditButt.Name = "RedditButt"
+        Me.RedditButt.Size = New System.Drawing.Size(75, 23)
+        Me.RedditButt.TabIndex = 10
+        Me.RedditButt.Text = "Reddit"
+        Me.RedditButt.UseVisualStyleBackColor = True
+        '
+        'Face_Booked
+        '
+        Me.Face_Booked.ForeColor = System.Drawing.Color.White
+        Me.Face_Booked.Image = CType(resources.GetObject("Face_Booked.Image"), System.Drawing.Image)
+        Me.Face_Booked.Location = New System.Drawing.Point(316, 56)
+        Me.Face_Booked.Name = "Face_Booked"
+        Me.Face_Booked.Size = New System.Drawing.Size(75, 23)
+        Me.Face_Booked.TabIndex = 9
+        Me.Face_Booked.Text = "Facebook"
+        Me.Face_Booked.UseVisualStyleBackColor = True
+        '
+        'Button23
+        '
+        Me.Button23.ForeColor = System.Drawing.Color.White
+        Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
+        Me.Button23.Location = New System.Drawing.Point(82, 56)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(75, 23)
+        Me.Button23.TabIndex = 7
+        Me.Button23.Text = "E-Mail"
+        Me.Button23.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.ForeColor = System.Drawing.Color.White
+        Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
+        Me.Button21.Location = New System.Drawing.Point(160, 56)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(75, 23)
+        Me.Button21.TabIndex = 5
+        Me.Button21.Text = "Bluesky"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(28, 61)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(55, 13)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Share via:"
         '
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.BackColor = System.Drawing.Color.Transparent
-        Me.Label26.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label26.Location = New System.Drawing.Point(27, 199)
+        Me.Label26.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(27, 25)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(95, 13)
-        Me.Label26.TabIndex = 13
+        Me.Label26.TabIndex = 3
         Me.Label26.Text = "Copy the link here:"
         '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(122, 195)
+        Me.TextBox1.Location = New System.Drawing.Point(122, 21)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(237, 20)
-        Me.TextBox1.TabIndex = 12
+        Me.TextBox1.TabIndex = 2
         Me.TextBox1.Text = "http://circuspals.w10.site"
         '
         'OpenFileDialog1
@@ -760,19 +739,19 @@ Partial Class Form1
         Me.ExitToolStripMenu.Name = "ContextMenuStrip1"
         Me.ExitToolStripMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ExitToolStripMenu.ShowImageMargin = False
-        Me.ExitToolStripMenu.Size = New System.Drawing.Size(120, 48)
+        Me.ExitToolStripMenu.Size = New System.Drawing.Size(125, 48)
         '
         'ToolStripMenuItem
         '
         Me.ToolStripMenuItem.Enabled = False
         Me.ToolStripMenuItem.Name = "ToolStripMenuItem"
-        Me.ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.ToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.ToolStripMenuItem.Text = "Circus Pals 2.0"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         Me.ExitToolStripMenuItem.ToolTipText = "Exits the Application."
         '
@@ -783,7 +762,7 @@ Partial Class Form1
         '
         'Button20
         '
-        Me.Button20.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button20.BackColor = System.Drawing.Color.Gray
         Me.Button20.ForeColor = System.Drawing.Color.White
         Me.Button20.Location = New System.Drawing.Point(138, 335)
         Me.Button20.Name = "Button20"
@@ -794,7 +773,7 @@ Partial Class Form1
         '
         'Button16
         '
-        Me.Button16.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button16.BackColor = System.Drawing.Color.Gray
         Me.Button16.ForeColor = System.Drawing.Color.White
         Me.Button16.Location = New System.Drawing.Point(396, 335)
         Me.Button16.Name = "Button16"
@@ -805,7 +784,7 @@ Partial Class Form1
         '
         'Button10
         '
-        Me.Button10.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button10.BackColor = System.Drawing.Color.Gray
         Me.Button10.ForeColor = System.Drawing.Color.White
         Me.Button10.Location = New System.Drawing.Point(7, 335)
         Me.Button10.Name = "Button10"
@@ -816,7 +795,7 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button6.BackColor = System.Drawing.Color.Gray
         Me.Button6.ForeColor = System.Drawing.Color.White
         Me.Button6.Location = New System.Drawing.Point(472, 335)
         Me.Button6.Name = "Button6"
@@ -827,7 +806,7 @@ Partial Class Form1
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button5.BackColor = System.Drawing.Color.Gray
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Location = New System.Drawing.Point(548, 335)
         Me.Button5.Name = "Button5"
@@ -838,7 +817,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button1.BackColor = System.Drawing.Color.Gray
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(66, 335)
         Me.Button1.Name = "Button1"
@@ -892,7 +871,7 @@ Partial Class Form1
         Me.JungleUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.JungleUpdate.Image = CType(resources.GetObject("JungleUpdate.Image"), System.Drawing.Image)
         Me.JungleUpdate.InitialImage = Nothing
-        Me.JungleUpdate.Location = New System.Drawing.Point(410, -2)
+        Me.JungleUpdate.Location = New System.Drawing.Point(402, -2)
         Me.JungleUpdate.Name = "JungleUpdate"
         Me.JungleUpdate.Size = New System.Drawing.Size(223, 40)
         Me.JungleUpdate.TabIndex = 30
@@ -901,8 +880,8 @@ Partial Class Form1
         '
         'ComputerBackgroundOptimizer
         '
-        Me.ComputerBackgroundOptimizer.BackColor = System.Drawing.Color.White
-        Me.ComputerBackgroundOptimizer.Location = New System.Drawing.Point(520, 59)
+        Me.ComputerBackgroundOptimizer.Image = CType(resources.GetObject("ComputerBackgroundOptimizer.Image"), System.Drawing.Image)
+        Me.ComputerBackgroundOptimizer.Location = New System.Drawing.Point(520, 64)
         Me.ComputerBackgroundOptimizer.Name = "ComputerBackgroundOptimizer"
         Me.ComputerBackgroundOptimizer.Size = New System.Drawing.Size(114, 31)
         Me.ComputerBackgroundOptimizer.TabIndex = 29
@@ -943,83 +922,83 @@ Partial Class Form1
         '
         'Button8
         '
-        Me.Button8.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(7, 157)
+        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
+        Me.Button8.Location = New System.Drawing.Point(6, 157)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(26, 23)
         Me.Button8.TabIndex = 22
         Me.Button8.Text = "?"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'Button14
         '
-        Me.Button14.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button14.ForeColor = System.Drawing.Color.White
-        Me.Button14.Location = New System.Drawing.Point(60, 181)
+        Me.Button14.Image = CType(resources.GetObject("Button14.Image"), System.Drawing.Image)
+        Me.Button14.Location = New System.Drawing.Point(64, 181)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(67, 23)
         Me.Button14.TabIndex = 21
         Me.Button14.Text = "Monotone"
-        Me.Button14.UseVisualStyleBackColor = False
+        Me.Button14.UseVisualStyleBackColor = True
         '
         'Button13
         '
-        Me.Button13.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.ForeColor = System.Drawing.Color.White
-        Me.Button13.Location = New System.Drawing.Point(33, 157)
+        Me.Button13.Image = CType(resources.GetObject("Button13.Image"), System.Drawing.Image)
+        Me.Button13.Location = New System.Drawing.Point(32, 157)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(26, 23)
         Me.Button13.TabIndex = 20
         Me.Button13.Text = "R"
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.Button13.UseVisualStyleBackColor = True
         '
         'Button12
         '
-        Me.Button12.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(61, 157)
+        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
+        Me.Button12.Location = New System.Drawing.Point(64, 157)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(67, 23)
         Me.Button12.TabIndex = 19
         Me.Button12.Text = "Think"
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.Button12.UseVisualStyleBackColor = True
         '
         'Button11
         '
-        Me.Button11.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(130, 157)
+        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
+        Me.Button11.Location = New System.Drawing.Point(134, 156)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(67, 23)
         Me.Button11.TabIndex = 18
         Me.Button11.Text = "Whisper"
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.Button11.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.Location = New System.Drawing.Point(174, 1)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(26, 23)
         Me.Button4.TabIndex = 17
         Me.Button4.Text = "<"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(7, 181)
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(6, 181)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(52, 23)
         Me.Button3.TabIndex = 16
         Me.Button3.Text = "Stop"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -1035,15 +1014,15 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(130, 181)
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(133, 181)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(67, 23)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Speak"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'SpeakBox
         '
@@ -1072,15 +1051,15 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.White
+        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
         Me.Button7.Location = New System.Drawing.Point(156, 181)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(26, 23)
         Me.Button7.TabIndex = 20
         Me.Button7.Text = "?"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -1094,27 +1073,27 @@ Partial Class Form1
         '
         'Button17
         '
-        Me.Button17.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button17.ForeColor = System.Drawing.Color.White
+        Me.Button17.Image = CType(resources.GetObject("Button17.Image"), System.Drawing.Image)
         Me.Button17.Location = New System.Drawing.Point(131, 17)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(51, 23)
         Me.Button17.TabIndex = 18
         Me.Button17.Text = "Play"
-        Me.Button17.UseVisualStyleBackColor = False
+        Me.Button17.UseVisualStyleBackColor = True
         '
         'Button18
         '
-        Me.Button18.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.Color.White
+        Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
         Me.Button18.Location = New System.Drawing.Point(99, 17)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(26, 23)
         Me.Button18.TabIndex = 17
         Me.Button18.Text = "<"
-        Me.Button18.UseVisualStyleBackColor = False
+        Me.Button18.UseVisualStyleBackColor = True
         '
         'Label21
         '
@@ -1132,7 +1111,7 @@ Partial Class Form1
         '
         Me.WackyWatch.BackColor = System.Drawing.Color.Transparent
         Me.WackyWatch.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.WackyWatch.Image = Global.CircusPals.My.Resources.Resources.BackgroundWatch
+        Me.WackyWatch.Image = CType(resources.GetObject("WackyWatch.Image"), System.Drawing.Image)
         Me.WackyWatch.Location = New System.Drawing.Point(7, 113)
         Me.WackyWatch.Name = "WackyWatch"
         Me.WackyWatch.Size = New System.Drawing.Size(203, 162)
@@ -1145,22 +1124,14 @@ Partial Class Form1
         '
         'AxAgent1
         '
-        Me.AxAgent1.Enabled = True
-        Me.AxAgent1.Location = New System.Drawing.Point(0, 0)
-        Me.AxAgent1.Name = "AxAgent1"
-        Me.AxAgent1.OcxState = CType(resources.GetObject("AxAgent1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxAgent1.Size = New System.Drawing.Size(0, 0)
-        Me.AxAgent1.TabIndex = 0
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(632, 373)
+        Me.ClientSize = New System.Drawing.Size(624, 361)
         Me.Controls.Add(Me.UtilPanel3)
-        Me.Controls.Add(Me.UtilPanel1)
         Me.Controls.Add(Me.JungleUpdate)
         Me.Controls.Add(Me.JungleBGModule)
         Me.Controls.Add(Me.ComputerBackgroundOptimizer)
@@ -1172,8 +1143,8 @@ Partial Class Form1
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.AxAgent1)
         Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.UtilPanel1)
         Me.Controls.Add(Me.WackyWatch)
         Me.Controls.Add(Me.ComputerUpdate)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1203,8 +1174,7 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpeakPic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.TabPage3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ExitToolStripMenu.ResumeLayout(False)
         CType(Me.MashButton, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1217,7 +1187,6 @@ Partial Class Form1
         Me.UtilPanel3.ResumeLayout(False)
         Me.UtilPanel3.PerformLayout()
         CType(Me.WackyWatch, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AxAgent1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1226,7 +1195,16 @@ Partial Class Form1
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents KeywordTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents URLTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents UtilPanel1 As System.Windows.Forms.Panel
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -1242,6 +1220,11 @@ Partial Class Form1
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents OpenFileDialog2 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Button20 As System.Windows.Forms.Button
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button21 As System.Windows.Forms.Button
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Button23 As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer3 As System.Windows.Forms.Timer
@@ -1261,6 +1244,8 @@ Partial Class Form1
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents UtilPanel3 As System.Windows.Forms.Panel
     Friend WithEvents WackyWatch As System.Windows.Forms.PictureBox
+    Friend WithEvents Face_Booked As System.Windows.Forms.Button
+    Friend WithEvents RedditButt As System.Windows.Forms.Button
     Friend WithEvents ExitToolStripMenu As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents TimerOfDOOM As System.Windows.Forms.Timer
     Friend WithEvents SingTimer As System.Windows.Forms.Timer
@@ -1269,6 +1254,7 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AxAgent1 As AxAgentObjects.AxAgent
     Friend WithEvents ReturnToSpot As System.Windows.Forms.Timer
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
@@ -1294,25 +1280,7 @@ Partial Class Form1
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents SpeakPic As System.Windows.Forms.PictureBox
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents BuildNumber As System.Windows.Forms.Label
     Friend WithEvents CurrentDate As System.Windows.Forms.Label
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents URLTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents KeywordTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents BuildNumber As System.Windows.Forms.Label
 
 End Class

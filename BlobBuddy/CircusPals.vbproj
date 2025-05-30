@@ -50,7 +50,7 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>CircusPals.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <PlatformTarget>x86</PlatformTarget>
@@ -131,6 +131,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Settings.vb" />
     <Compile Include="SplashScreen1.Designer.vb">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </Compile>
@@ -230,9 +231,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\darkbg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
@@ -242,14 +240,17 @@
     <Content Include="circuspalsicon.ico" />
     <None Include="Resources\agent_icon.gif" />
     <None Include="Resources\CaineShare.png" />
+    <None Include="Resources\circuspals_games.wav" />
     <Content Include="Resources\circus_pals_logo.gif" />
+    <None Include="Resources\dragonbutton.png" />
+    <None Include="Resources\PomniBackground.bmp" />
+    <None Include="Resources\msagent_error.wav" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Resources\SingOff.png" />
     <None Include="Resources\SingOn.png" />
     <None Include="Resources\jordon_button.png" />
     <None Include="Resources\mushbutton.gif" />
     <None Include="Resources\mashbutton.gif" />
-    <None Include="Resources\computerbg2.png" />
     <None Include="Resources\CircusBackground.bmp" />
     <None Include="Resources\SplashScreen.gif" />
     <None Include="Resources\game_spud.gif" />
@@ -260,7 +261,6 @@
     <None Include="Resources\lazer98.gif" />
     <None Include="Resources\AboutBanner.png" />
     <None Include="Resources\CircusBit.bmp" />
-    <None Include="Resources\lb_bluebg.png" />
     <None Include="Resources\Speak1.png" />
     <None Include="Resources\Fact.png" />
     <None Include="Resources\Animate.png" />
@@ -275,44 +275,10 @@
     <None Include="Resources\CaineBG.bmp" />
     <None Include="Resources\DialogBackground.png" />
     <None Include="Resources\circuspals_firsttime.wav" />
-    <None Include="Resources\cosmicbutton.png" />
-    <None Include="Resources\cosmiclogo1.png" />
-    <None Include="Resources\maxalert_rewritten_logo.png" />
-    <None Include="Resources\aboutboxnewprototypr.png" />
-    <None Include="Resources\JungleThemeNew.png" />
-    <None Include="Resources\CompUpdate2.png" />
-    <None Include="Resources\tabcontrolmodulejungle.bmp" />
-    <None Include="Resources\bonkeyupdate.png" />
-    <None Include="Resources\almost_invisible_max2.png" />
     <None Include="Resources\transparent.png" />
-    <None Include="Resources\almost_invisible_max1.png" />
-    <None Include="Resources\almost_invisible_max.png" />
-    <None Include="Resources\panelbg1.png" />
-    <None Include="Resources\panelbg.png" />
-    <None Include="Resources\cosmiclogo.png" />
-    <None Include="Resources\lightbluebg1.png" />
-    <None Include="Resources\lightbluebg.png" />
-    <None Include="Resources\stop2.png" />
     <None Include="Resources\runmsh.png" />
-    <None Include="Resources\listening.png" />
-    <None Include="Resources\wave.png" />
-    <None Include="Resources\amazingfact.png" />
-    <None Include="Resources\pleased.png" />
-    <None Include="Resources\scout.png" />
-    <None Include="Resources\maxalerttransparentbgfixed.png" />
-    <None Include="Resources\maxalertbg.png" />
-    <None Include="Resources\tabcontrolhider2.png" />
-    <None Include="Resources\tabcontrolhider.png" />
-    <None Include="Resources\speak.png" />
-    <None Include="Resources\moveright.png" />
-    <None Include="Resources\gestureright2.png" />
-    <None Include="Resources\gestureright.png" />
-    <None Include="Resources\updatebuttonwithbg.png" />
-    <None Include="Resources\updatebutton.png" />
-    <None Include="Resources\1.png" />
     <None Include="Resources\hostedon.png" />
     <None Include="Resources\agent_button.gif" />
-    <None Include="Resources\bonzibg.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">

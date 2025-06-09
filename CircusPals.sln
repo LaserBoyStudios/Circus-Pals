@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CircusPals", "BlobBuddy\CircusPals.vbproj", "{23D0C9E5-C8E9-4429-A577-062330F75D6C}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WackBook", "BBReader\WackBook.vbproj", "{49E26A52-3F5B-41C8-A9B2-C5FADE943F24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{23D0C9E5-C8E9-4429-A577-062330F75D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23D0C9E5-C8E9-4429-A577-062330F75D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23D0C9E5-C8E9-4429-A577-062330F75D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E26A52-3F5B-41C8-A9B2-C5FADE943F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E26A52-3F5B-41C8-A9B2-C5FADE943F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E26A52-3F5B-41C8-A9B2-C5FADE943F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E26A52-3F5B-41C8-A9B2-C5FADE943F24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

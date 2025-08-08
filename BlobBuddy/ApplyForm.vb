@@ -136,7 +136,7 @@ Public Class ApplyForm
                 Dim selectedTime = selectedItem.SubItems(0).Text
                 Dim eventNode = xmlDoc.SelectSingleNode("Events/Event[EventDate='" & SelectedDate.ToShortDateString() & "'][EventTime='" & selectedTime.Substring(0, selectedTime.Length - 3) & "'][EventAMPM='" & selectedTime.Substring(selectedTime.Length - 2) & "']")
 
-                If TypeOf eventNode Is Object Then
+                If Not eventNode Is Nothing AndAlso eventNode("EventDesc").InnerText = selectedItem.SubItems(1).Text Then
                     eventNode.ParentNode.RemoveChild(eventNode)
                     xmlDoc.Save(EventXML)
                     ReloadEvents()
@@ -219,4 +219,5 @@ Public Class ApplyForm
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         Close()
     End Sub
+
 End Class

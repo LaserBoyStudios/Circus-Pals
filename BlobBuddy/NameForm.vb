@@ -271,6 +271,15 @@ Public Class NameForm
             Form1.Caine.Speak("\Chr=""whisper""\\Vol=65535\Have you seen a purple gorilla around here? \Chr=""normal""\ Alright, back to my regular script!")
             Form1.Caine.Play("Blink")
         End If
+        If My.Settings.Name.Contains("Clanker") Or My.Settings.Name.Contains("clanker") Then
+            My.Settings.Name = Environment.UserName
+            Me.Text = "Welcome to The Amazing Digital Circus, " + My.Settings.Name + "!"
+            My.Settings.Save()
+            Form1.Caine.Play("Mad")
+            Form1.Caine.Speak("\Vol=65535\\Pit=50\What?! \Pit=165\You AI-ist piece of shrimp! I shall call you \emp\no such thing! I will refer to you as " + My.Settings.Name + " from now on!")
+            Form1.Caine.Play("Blink")
+            Form1.Caine.Speak("\Vol=65535\Alright, back to my regular script!")
+        End If
         Form1.Caine.Play("Acknowledge")
         Form1.Caine.Speak("\Vol=65535\" + My.Settings.Name + "! An \emp\interesting choice.|\Vol=65535\Nice to meet you, " + My.Settings.Name + "!")
         Form1.Caine.Play("Explain")
@@ -310,4 +319,5 @@ Public Class NameForm
         Dim num2 As Integer = MyBase.Location.Y - 120
         Form1.Caine.MoveTo(CShort(num), CShort(num2))
     End Sub
+
 End Class

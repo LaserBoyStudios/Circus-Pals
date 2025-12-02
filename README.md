@@ -1,7 +1,7 @@
 # Circus Pals
 Welcome to the Circus Pals repository! This repository contains the source code for Circus Pals, a modern virus-free alternative to BonziBUDDY by Bonzi Software.
 
-Please note that Circus Pals and all other Laser Boy products are closed source, and the source will only be available to trusted members.
+<b>Please note that all other Laser Boy products, such as future Circus Pals releases, are currently closed-source and considered proprietary.</b>
 
 # Introduction
 Circus Pals brings everyone's favorite Teeth-Head, Caine, to your desktop! Please note that this project is a fan-based tie-in program. The Amazing Digital Circus is owned by Screen Australia, GLITCH Productions, SMG4 and Gooseworx. Please support the official release!
@@ -21,4 +21,4 @@ This source code is licensed under the Mozilla Public License 2.0. By using this
 3. Run and test the program!
 
 # Official Site
-If you are interested in future releases of Circus Pals and its characters, check out: http://circuspals.w10.site
+If you are interested in future releases of Circus Pals, check out: http://circuspals.w10.site/download.html

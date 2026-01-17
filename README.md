@@ -12,7 +12,7 @@ Circus Pals brings everyone's favorite Teeth-Head, Caine, to your desktop! Pleas
 * Everyone's favorite ringmaster, Caine!
 
 # License
-This source code is licensed under the [Do What the %$!# You Want to Public License](https://github.com/LaserBoyStudios/Circus-Pals/blob/main/LICENSE). By using this source code, you accept 1 condition of the DWTFYWT license agreement, including doing whatever you want with the code.
+This source code is licensed under the [Do What the %$!# You Want to Public License](https://github.com/LaserBoyStudios/Circus-Pals/blob/main/LICENSE). By using this source code, you accept 1 condition of the DWTFYWT license agreement, which is changing the name.
 
 ==Compile Instructions== NOTE: I recommend you use Visual Studio 2008, as that it is what I use to develop.
 

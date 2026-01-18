@@ -157,12 +157,6 @@ Namespace My.Resources
             End Get
         End Property
         
-        Friend ReadOnly Property circuspals_games() As System.IO.UnmanagedMemoryStream
-            Get
-                Return ResourceManager.GetStream("circuspals_games", resourceCulture)
-            End Get
-        End Property
-        
         Friend ReadOnly Property CircusUpdate() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("CircusUpdate", resourceCulture)
@@ -173,13 +167,6 @@ Namespace My.Resources
         Friend ReadOnly Property DialogBackground() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DialogBackground", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property dragonbutton() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("dragonbutton", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -229,13 +216,6 @@ Namespace My.Resources
         Friend ReadOnly Property GameScreen() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("GameScreen", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property hostedon() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("hostedon", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

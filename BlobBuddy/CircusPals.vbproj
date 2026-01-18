@@ -239,10 +239,8 @@
     <Content Include="circuspalsicon.ico" />
     <None Include="Resources\agent_icon.gif" />
     <None Include="Resources\CaineShare.png" />
-    <None Include="Resources\circuspals_games.wav" />
     <None Include="Resources\calendar.png" />
     <Content Include="Resources\circus_pals_logo.gif" />
-    <None Include="Resources\dragonbutton.png" />
     <None Include="Resources\PomniBackground.bmp" />
     <None Include="Resources\msagent_error.wav" />
     <None Include="Resources\SingOff.png" />
@@ -276,7 +274,6 @@
     <None Include="Resources\circuspals_firsttime.wav" />
     <None Include="Resources\transparent.png" />
     <None Include="Resources\runmsh.png" />
-    <None Include="Resources\hostedon.png" />
     <None Include="Resources\agent_button.gif" />
   </ItemGroup>
   <ItemGroup>

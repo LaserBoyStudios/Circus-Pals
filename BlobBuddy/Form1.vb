@@ -31,6 +31,12 @@ Public Class Form1
     End Sub
 
     Public Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If Not My.Settings.IsUpdated Then
+            My.Settings.Upgrade()
+            My.Settings.IsUpdated = True
+            My.Settings.Save()
+            My.Settings.Reload()
+        End If
         EventTimer.Start()
         RandomSpeechTimer.Start()
         If My.Settings.TrackBarValue = 1 Then

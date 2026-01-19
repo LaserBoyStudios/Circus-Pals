@@ -45,14 +45,12 @@
         If RadioButton4.Checked = True Then
             Form1.Label2.Show()
             Form1.BackgroundImage = My.Resources.PomniBackground
-            Form1.ComputerBackgroundOptimizer.Show()
-            Form1.JungleBGModule.Hide()
+            Form1.TabControlHidePictureBox.Image = Nothing
             My.Settings.Theme = 1
             My.Settings.Save()
         Else
             Form1.BackgroundImage = My.Resources.CircusBackground
-            Form1.ComputerBackgroundOptimizer.Hide()
-            Form1.JungleBGModule.Show()
+            Form1.TabControlHidePictureBox.Image = My.Resources.CircusBit
             Form1.Label2.Hide()
             My.Settings.Theme = 2
             My.Settings.Save()

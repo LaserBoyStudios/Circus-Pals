@@ -1,9 +1,8 @@
 ﻿Public Class AboutBoxNew
 
     Public Sub AboutBoxNew_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim num As Integer = MyBase.Location.X - 20
-        Dim num2 As Integer = MyBase.Location.Y - 120
-        Form1.Caine.MoveTo(CShort(num), CShort(num2))
+        Label1.Text = My.Application.Info.Version.ToString
+        Form1.Caine.MoveTo(Location.X - 20, Location.Y - 120)
     End Sub
 
     Private Sub AboutBoxNew_Close(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.FormClosed
@@ -11,18 +10,15 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim webAddress As String = "https://www.tmafe.com"
-        Process.Start(webAddress)
+        Process.Start("https://www.tmafe.com")
     End Sub
 
     Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
-        Dim webAddress As String = "https://www.tmafe.com/msagent"
-        Process.Start(webAddress)
+        Process.Start("https://www.tmafe.com/msagent")
     End Sub
 
     Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox4.Click
-        Dim webAddress As String = "https://www.tmafe.com"
-        Process.Start(webAddress)
+        Process.Start("https://www.tmafe.com")
     End Sub
 
     Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
@@ -30,7 +26,6 @@
     End Sub
 
     Private Sub PictureBox5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox5.Click
-        Dim webAddress As String = "https://jordyporgie.nekoweb.org/"
-        Process.Start(webAddress)
+        Process.Start("https://jordyporgie.nekoweb.org/")
     End Sub
 End Class

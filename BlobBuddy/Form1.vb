@@ -17,13 +17,14 @@ Public Class Form1
     Private WithEvents processCheckTimer As Timer
     Private XmlCtrl As New XmlDocument
     Private notifyIcon As NotifyIcon
-    Public allowClose
+    Public AllowClose
     Public Caine As IAgentCtlCharacterEx
     Shared Random As New Random
     Dim i As Integer
     Private player As New SoundPlayer()
     Public WithEvents AgentControl As Agent
-    Const DATAPATH = "Caine.acs"
+    Dim WelcomeRequest As IAgentCtlRequest
+    Dim LeaveRequest As IAgentCtlRequest
 
     Private Sub NotifyIcon_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.Show()
@@ -37,6 +38,7 @@ Public Class Form1
             My.Settings.Save()
             My.Settings.Reload()
         End If
+        BuildNumber.Text = "Build " & My.Application.Info.Version.Build
         EventTimer.Start()
         RandomSpeechTimer.Start()
         If My.Settings.TrackBarValue = 1 Then
@@ -63,15 +65,13 @@ Public Class Form1
             Me.WackyWatch.Show()
             Me.JungleUpdate.Show()
             Me.BackgroundImage = My.Resources.PomniBackground
-            Me.ComputerBackgroundOptimizer.Show()
-            Me.JungleBGModule.Hide()
+            Me.TabControlHidePictureBox.Image = Nothing
         End If
         If My.Settings.Theme = 2 Then
             Me.WackyWatch.Show()
             Me.JungleUpdate.Show()
             Me.BackgroundImage = My.Resources.CircusBackground
-            Me.ComputerBackgroundOptimizer.Hide()
-            Me.JungleBGModule.Show()
+            Me.TabControlHidePictureBox.Image = My.Resources.CircusBit
             Me.Label2.Hide()
         End If
 
@@ -81,51 +81,34 @@ Public Class Form1
 
         'THIS IS THE FIRST RUN
 
+        Try
+            AxAgent1.Characters.Load("Caine", "Caine.acs")
+            Caine = AxAgent1.Characters("Caine")
+            Caine.LanguageID = 1033
+            Caine.MoveTo(320, 240)
+            Caine.TTSModeID = "{CA141FD0-AC7F-11D1-97A3-006008273000}"
+            Caine.Show()
+        Catch
+            My.Computer.Audio.Play(My.Resources.msagent_error, AudioPlayMode.Background)
+            Dim ErrorBox As DialogResult = MsgBox("You need to install MSAgent or Caine.acs to use the program, otherwise Caine won't show up." & vbCrLf & "" & vbCrLf & "Do you want to close the application? (NOTE: Clicking ""No"" will result in even more errors without MSAgent)", 65556, "Whoops!")
+            If ErrorBox = DialogResult.Yes Then
+                allowClose = True
+                Me.Close()
+            End If
+        End Try
+
         If My.Settings.isFirstRun Then
             My.Settings.isFirstRun = False
             My.Settings.Save()
-            Try
-                AxAgent1.Characters.Load("Caine", DATAPATH)
-                Caine = AxAgent1.Characters("Caine")
-                Caine.LanguageID = 1033
-                Timer1.Enabled = True ' Enable the Timer control
-                My.Computer.Audio.Play(My.Resources.circuspals_firsttime, AudioPlayMode.Background)
-                Caine.MoveTo(320, 240)
-                Caine.TTSModeID = "{CA141FD0-AC7F-11D1-97A3-006008273000}"
-                Caine.Show()
-                Me.Show()
-                Caine.Speak("\Vol=65535\\Pit=136\Welcome! \rst\\Vol=65535\\Spd=150\To The \emp\Amazing Digital Desktop!")
-                Caine.Play("Restpose")
-                Caine.Speak("\Vol=65535\I don't believe we've been properly introduced.")
-                Caine.Play("Greet")
-                Caine.Speak("\Vol=65535\My name is Caine!")
-                Caine.Play("Restpose")
-                Caine.Speak("\Vol=65535\What is \emp\ your name?")
-            Catch Ex As Exception
-                My.Computer.Audio.Play(My.Resources.msagent_error, AudioPlayMode.Background)
-                Dim ErrorBox As DialogResult = MsgBox("You need to install MSAgent or Caine.acs to use the program, otherwise Caine won't show up." & vbCrLf & "" & vbCrLf & "Do you want to close the application? (NOTE: Clicking ""No"" will result in even more errors without MSAgent)", 65556, "Whoops!")
-                If ErrorBox = DialogResult.Yes Then
-                    allowClose = True
-                    Me.Close()
-                End If
-            End Try
+            My.Computer.Audio.Play(My.Resources.circuspals_firsttime, AudioPlayMode.Background)
+            Caine.Speak("\Vol=65535\\Pit=136\Welcome! \rst\\Vol=65535\\Spd=150\To The \emp\Amazing Digital Desktop!")
+            Caine.Play("Restpose")
+            Caine.Speak("\Vol=65535\I don't believe we've been properly introduced.")
+            Caine.Play("Greet")
+            Caine.Speak("\Vol=65535\My name is Caine!")
+            Caine.Play("Restpose")
+            WelcomeRequest = Caine.Speak("\Vol=65535\What is \emp\ your name?")
         Else
-            Try
-                AxAgent1.Characters.Load("Caine", DATAPATH)
-                Caine = AxAgent1.Characters("Caine")
-                Caine.LanguageID = 1033
-                Caine.MoveTo(320, 240)
-                Caine.TTSModeID = "{CA141FD0-AC7F-11D1-97A3-006008273000}"
-                Caine.Show()
-            Catch Ex As Exception
-                My.Computer.Audio.Play(My.Resources.msagent_error, AudioPlayMode.Background)
-                Dim ErrorBox As DialogResult = MsgBox("You need to install MSAgent or Caine.acs to use the program, otherwise Caine won't show up." & vbCrLf & "" & vbCrLf & "Do you want to close the application? (NOTE: Clicking ""No"" will result in even more errors without MSAgent)", 65556, "Whoops!")
-                If ErrorBox = DialogResult.Yes Then
-                    allowClose = True
-                    Me.Close()
-                End If
-            End Try
-
             If CurrentDate.Text.Contains("Date") Then
                 CurrentDate.Text = DateTime.Now.Date
             End If
@@ -202,82 +185,64 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         Caine.Hide()
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        If Caine.Visible Then
-            allowClose = True
-            Timer3.Start()
-            Caine.StopAll()
+        Caine.StopAll()
 
-            Dim random As New Random()
-            Dim randomNumber32 As Integer = random.Next(1, 11)
+        Dim random As New Random()
+        Dim randomNumber32 As Integer = random.Next(1, 11)
 
-            Select Case randomNumber32
-                Case 1
-                    Caine.Play("Wave")
-                    Caine.Speak("It hurts me to say goodbye, " + My.Settings.Name + ".")
-                    Caine.Hide()
-                Case 2
-                    Caine.Play("Wave")
-                    Caine.Speak("Until next time my friend!")
-                    Caine.Hide()
-                Case 3
-                    Caine.Play("Wave")
-                    Caine.Speak("Until next time, " + My.Settings.Name + ".")
-                    Caine.Hide()
-                Case 4
-                    Caine.Play("Acknowledge")
-                    Caine.Speak("Well, I guess I am done for today. Bye for now.")
-                    Caine.Hide()
-                Case 5
-                    Caine.Play("Acknowledge")
-                    Caine.Speak("It looks like my work here is done. See you later.")
-                    Caine.Hide()
-                Case 6
-                    Caine.Play("wave")
-                    Caine.Speak("I hope to see you again soon, " + My.Settings.Name + ".")
-                    Caine.Hide()
-                Case 7
-                    Caine.Play("Surprised")
-                    Caine.Speak("Oh no! Not the exit!")
-                    Caine.Hide()
-                Case 8
-                    Caine.Play("RestPose")
-                    Caine.Speak("Oh, guess I'll instantly disappear")
-                    Caine.Play("Silly")
-                Case 9
-                    Caine.Play("Explain")
-                    Caine.Speak("Well, I'm going to go drink water! It's been a \emp\while since I've done that.")
-                    Caine.Hide()
-                Case 10
-                    Caine.Play("Restpose")
-                    Caine.Speak("\emp\I am such a good \Pit=400\\Spd=250\\Map=""bah-ah-ah-ah-ah-ah-ah-ah-ah-ah-\rst\sahtmtornmhsrp;h;xhgzodpsosoaaah,""=""bo-""\")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Think("...")
-                    Caine.Think("...")
-                    Caine.Think("...")
-                    Caine.Hide()
-            End Select
-        Else
-            allowClose = True
-            Me.Close()
-        End If
+        Select Case randomNumber32
+            Case 1
+                Caine.Play("Wave")
+                Caine.Speak("It hurts me to say goodbye, " + My.Settings.Name + ".")
+            Case 2
+                Caine.Play("Wave")
+                Caine.Speak("Until next time my friend!")
+            Case 3
+                Caine.Play("Wave")
+                Caine.Speak("Until next time, " + My.Settings.Name + ".")
+            Case 4
+                Caine.Play("Acknowledge")
+                Caine.Speak("Well, I guess I am done for today. Bye for now.")
+            Case 5
+                Caine.Play("Acknowledge")
+                Caine.Speak("It looks like my work here is done. See you later.")
+            Case 6
+                Caine.Play("wave")
+                Caine.Speak("I hope to see you again soon, " + My.Settings.Name + ".")
+            Case 7
+                Caine.Play("Surprised")
+                Caine.Speak("Oh no! Not the exit!")
+            Case 8
+                Caine.Play("RestPose")
+                Caine.Speak("Oh, guess I'll instantly disappear")
+                Caine.Play("Silly")
+            Case 9
+                Caine.Play("Explain")
+                Caine.Speak("Well, I'm going to go drink water! It's been a \emp\while since I've done that.")
+            Case 10
+                Caine.Play("Restpose")
+                Caine.Speak("\emp\I am such a good \Pit=400\\Spd=250\\Map=""bah-ah-ah-ah-ah-ah-ah-ah-ah-ah-\rst\sahtmtornmhsrp;h;xhgzodpsosoaaah,""=""bo-""\")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Think("...")
+                Caine.Think("...")
+                Caine.Think("...")
+        End Select
+
+        LeaveRequest = Caine.Hide()
     End Sub
 
     Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
@@ -606,14 +571,7 @@ Public Class Form1
         OptionsForm.Show()
     End Sub
 
-    Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        Timer1.Enabled = False
-
-        Dim form2 As New NameForm()
-        form2.Show()
-    End Sub
-
-    Private Sub Timer3_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer3.Tick
+    Private Sub Timer3_Tick(ByVal sender As Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
     Private Sub CheckBandicam()
@@ -954,7 +912,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles MyBase.FormClosing
-        If Convert.ToBoolean(Operators.AndObject(My.Settings.MinimizeOnClose, Operators.CompareObjectEqual(allowClose, False, False))) Then
+        If Convert.ToBoolean(Operators.AndObject(My.Settings.MinimizeOnClose, Operators.CompareObjectEqual(AllowClose, False, False))) Then
             e.Cancel = True
             Me.Hide()
             NotifyIcon1.Visible = True
@@ -1449,9 +1407,8 @@ Public Class Form1
     End Sub
 
     Private Sub JungleUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles JungleUpdate.Click
-        Caine.Speak("Your current version is 3.0! Let's launch my web page to see if there's an update...")
-        Dim webAddress As String = "http://circuspals.w10.site/update.html?version=3.0.0"
-        Process.Start(webAddress)
+        Caine.Speak("Your current version is 3.1! Let's launch my web page to see if there's an update...")
+        Process.Start("http://circuspals.w10.site/update.html?version=3.1.9514")
     End Sub
 
     Private Sub Button7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
@@ -1484,73 +1441,60 @@ Public Class Form1
         For Each process As Process In processes
             process.Kill()
         Next
-        If Caine.Visible Then
-            allowClose = True
-            Timer3.Start()
-            Caine.StopAll()
 
-            Dim random As New Random()
-            Dim randomNumber32 As Integer = random.Next(1, 11)
+        Caine.StopAll()
 
-            Select Case randomNumber32
-                Case 1
-                    Caine.Play("Wave")
-                    Caine.Speak("It hurts me to say goodbye, " + My.Settings.Name + ".")
-                    Caine.Hide()
-                Case 2
-                    Caine.Play("Wave")
-                    Caine.Speak("Until next time my friend!")
-                    Caine.Hide()
-                Case 3
-                    Caine.Play("Wave")
-                    Caine.Speak("Until next time, " + My.Settings.Name + ".")
-                    Caine.Hide()
-                Case 4
-                    Caine.Play("Acknowledge")
-                    Caine.Speak("Well, I guess I am done for today. Bye for now.")
-                    Caine.Hide()
-                Case 5
-                    Caine.Play("Acknowledge")
-                    Caine.Speak("It looks like my work here is done. See you later.")
-                    Caine.Hide()
-                Case 6
-                    Caine.Play("wave")
-                    Caine.Speak("I hope to see you again soon, " + My.Settings.Name + ".")
-                    Caine.Hide()
-                Case 7
-                    Caine.Play("Surprised")
-                    Caine.Speak("Oh no! Not the exit!")
-                    Caine.Hide()
-                Case 8
-                    Caine.Play("RestPose")
-                    Caine.Speak("Oh, guess I'll instantly disappear")
-                    Caine.Play("Silly")
-                Case 9
-                    Caine.Play("Explain")
-                    Caine.Speak("Well, I'm going to go drink water! It's been a \emp\while since I've done that.")
-                    Caine.Hide()
-                Case 10
-                    Caine.Play("Restpose")
-                    Caine.Speak("\emp\I am such a good \Pit=400\\Spd=250\\Map=""bah-ah-ah-ah-ah-ah-ah-ah-ah-ah-\rst\sahtmtornmhsrp;h;xhgzodpsosoaaah,""=""bo-""\")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Play("Idle3_1")
-                    Caine.Think("...")
-                    Caine.Think("...")
-                    Caine.Think("...")
-                    Caine.Hide()
-            End Select
-        Else
-            allowClose = True
-            Me.Close()
-        End If
+        Dim random As New Random()
+        Dim randomNumber32 As Integer = random.Next(1, 11)
+
+        Select Case randomNumber32
+            Case 1
+                Caine.Play("Wave")
+                Caine.Speak("It hurts me to say goodbye, " + My.Settings.Name + ".")
+            Case 2
+                Caine.Play("Wave")
+                Caine.Speak("Until next time my friend!")
+            Case 3
+                Caine.Play("Wave")
+                Caine.Speak("Until next time, " + My.Settings.Name + ".")
+            Case 4
+                Caine.Play("Acknowledge")
+                Caine.Speak("Well, I guess I am done for today. Bye for now.")
+            Case 5
+                Caine.Play("Acknowledge")
+                Caine.Speak("It looks like my work here is done. See you later.")
+            Case 6
+                Caine.Play("wave")
+                Caine.Speak("I hope to see you again soon, " + My.Settings.Name + ".")
+            Case 7
+                Caine.Play("Surprised")
+                Caine.Speak("Oh no! Not the exit!")
+            Case 8
+                Caine.Play("RestPose")
+                Caine.Speak("Oh, guess I'll instantly disappear")
+                Caine.Play("Silly")
+            Case 9
+                Caine.Play("Explain")
+                Caine.Speak("Well, I'm going to go drink water! It's been a \emp\while since I've done that.")
+            Case 10
+                Caine.Play("Restpose")
+                Caine.Speak("\emp\I am such a good \Pit=400\\Spd=250\\Map=""bah-ah-ah-ah-ah-ah-ah-ah-ah-ah-\rst\sahtmtornmhsrp;h;xhgzodpsosoaaah,""=""bo-""\")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Play("Idle3_1")
+                Caine.Think("...")
+                Caine.Think("...")
+                Caine.Think("...")
+        End Select
+
+        LeaveRequest = Caine.Hide()
     End Sub
 
     Private Sub TimerOfDOOM_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles TimerOfDOOM.Tick
@@ -2197,4 +2141,13 @@ Public Class Form1
             Return False
         End Try
     End Function
+
+    Private Sub AxAgent1_RequestComplete(ByVal sender As System.Object, ByVal e As AxAgentObjects._AgentEvents_RequestCompleteEvent) Handles AxAgent1.RequestComplete
+        If e.request Is WelcomeRequest Then
+            NameForm.Show()
+        ElseIf e.request Is LeaveRequest Then
+            AllowClose = True
+            Close()
+        End If
+    End Sub
 End Class

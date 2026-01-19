@@ -70,9 +70,7 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ExitToolStripMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
@@ -89,9 +87,8 @@ Partial Class Form1
         Me.TimerOfDOOM = New System.Windows.Forms.Timer(Me.components)
         Me.SingTimer = New System.Windows.Forms.Timer(Me.components)
         Me.MashButton = New System.Windows.Forms.PictureBox
-        Me.JungleBGModule = New System.Windows.Forms.PictureBox
         Me.JungleUpdate = New System.Windows.Forms.PictureBox
-        Me.ComputerBackgroundOptimizer = New System.Windows.Forms.PictureBox
+        Me.TabControlHidePictureBox = New System.Windows.Forms.PictureBox
         Me.UtilPanel1 = New System.Windows.Forms.Panel
         Me.Button8 = New System.Windows.Forms.Button
         Me.Button14 = New System.Windows.Forms.Button
@@ -142,9 +139,8 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ExitToolStripMenu.SuspendLayout()
         CType(Me.MashButton, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.JungleBGModule, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.JungleUpdate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ComputerBackgroundOptimizer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TabControlHidePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UtilPanel1.SuspendLayout()
         Me.UtilPanel3.SuspendLayout()
         CType(Me.WackyWatch, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,13 +181,13 @@ Partial Class Form1
         '
         'BuildNumber
         '
-        Me.BuildNumber.AutoSize = True
         Me.BuildNumber.BackColor = System.Drawing.Color.Transparent
-        Me.BuildNumber.Location = New System.Drawing.Point(320, 8)
+        Me.BuildNumber.Location = New System.Drawing.Point(181, 8)
         Me.BuildNumber.Name = "BuildNumber"
-        Me.BuildNumber.Size = New System.Drawing.Size(63, 13)
+        Me.BuildNumber.Size = New System.Drawing.Size(212, 15)
         Me.BuildNumber.TabIndex = 21
-        Me.BuildNumber.Text = "Build 25256"
+        Me.BuildNumber.Text = "Build ?"
+        Me.BuildNumber.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'CurrentDate
         '
@@ -743,14 +739,6 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.Title = "BlobBUDDY - Open .MSH file..."
         '
-        'Timer1
-        '
-        Me.Timer1.Interval = 10000
-        '
-        'Timer3
-        '
-        Me.Timer3.Interval = 10000
-        '
         'NotifyIcon1
         '
         Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
@@ -884,17 +872,6 @@ Partial Class Form1
         Me.MashButton.TabIndex = 33
         Me.MashButton.TabStop = False
         '
-        'JungleBGModule
-        '
-        Me.JungleBGModule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.JungleBGModule.Image = CType(resources.GetObject("JungleBGModule.Image"), System.Drawing.Image)
-        Me.JungleBGModule.Location = New System.Drawing.Point(521, 71)
-        Me.JungleBGModule.Name = "JungleBGModule"
-        Me.JungleBGModule.Size = New System.Drawing.Size(111, 22)
-        Me.JungleBGModule.TabIndex = 31
-        Me.JungleBGModule.TabStop = False
-        Me.JungleBGModule.Visible = False
-        '
         'JungleUpdate
         '
         Me.JungleUpdate.BackColor = System.Drawing.Color.Transparent
@@ -908,14 +885,15 @@ Partial Class Form1
         Me.JungleUpdate.TabStop = False
         Me.JungleUpdate.Visible = False
         '
-        'ComputerBackgroundOptimizer
+        'TabControlHidePictureBox
         '
-        Me.ComputerBackgroundOptimizer.BackColor = System.Drawing.Color.White
-        Me.ComputerBackgroundOptimizer.Location = New System.Drawing.Point(520, 59)
-        Me.ComputerBackgroundOptimizer.Name = "ComputerBackgroundOptimizer"
-        Me.ComputerBackgroundOptimizer.Size = New System.Drawing.Size(114, 31)
-        Me.ComputerBackgroundOptimizer.TabIndex = 29
-        Me.ComputerBackgroundOptimizer.TabStop = False
+        Me.TabControlHidePictureBox.BackColor = System.Drawing.Color.White
+        Me.TabControlHidePictureBox.Image = Global.CircusPals.My.Resources.Resources.CircusBit
+        Me.TabControlHidePictureBox.Location = New System.Drawing.Point(521, 59)
+        Me.TabControlHidePictureBox.Name = "TabControlHidePictureBox"
+        Me.TabControlHidePictureBox.Size = New System.Drawing.Size(111, 31)
+        Me.TabControlHidePictureBox.TabIndex = 29
+        Me.TabControlHidePictureBox.TabStop = False
         '
         'UtilPanel1
         '
@@ -1245,16 +1223,15 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BackgroundImage = Global.CircusPals.My.Resources.Resources.CircusBackground
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(624, 361)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.UtilPanel2)
         Me.Controls.Add(Me.UtilPanel1)
         Me.Controls.Add(Me.UtilPanel3)
         Me.Controls.Add(Me.JungleUpdate)
-        Me.Controls.Add(Me.JungleBGModule)
-        Me.Controls.Add(Me.ComputerBackgroundOptimizer)
+        Me.Controls.Add(Me.TabControlHidePictureBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button20)
         Me.Controls.Add(Me.Button16)
@@ -1298,9 +1275,8 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ExitToolStripMenu.ResumeLayout(False)
         CType(Me.MashButton, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.JungleBGModule, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.JungleUpdate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ComputerBackgroundOptimizer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TabControlHidePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UtilPanel1.ResumeLayout(False)
         Me.UtilPanel1.PerformLayout()
         Me.UtilPanel3.ResumeLayout(False)
@@ -1335,15 +1311,12 @@ Partial Class Form1
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents OpenFileDialog2 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Button20 As System.Windows.Forms.Button
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
-    Friend WithEvents Timer3 As System.Windows.Forms.Timer
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
     Friend WithEvents Timer4 As System.Windows.Forms.Timer
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents ComputerBackgroundOptimizer As System.Windows.Forms.PictureBox
+    Friend WithEvents TabControlHidePictureBox As System.Windows.Forms.PictureBox
     Friend WithEvents JungleUpdate As System.Windows.Forms.PictureBox
-    Friend WithEvents JungleBGModule As System.Windows.Forms.PictureBox
     Friend WithEvents RandomSpeechTimer As System.Windows.Forms.Timer
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Label21 As System.Windows.Forms.Label

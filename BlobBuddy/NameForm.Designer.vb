@@ -78,11 +78,13 @@ Partial Class NameForm
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(314, 256)
         Me.MinimumSize = New System.Drawing.Size(314, 256)
         Me.Name = "NameForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Circus Pals"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

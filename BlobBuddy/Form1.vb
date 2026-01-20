@@ -123,14 +123,14 @@ Public Class Form1
             endTime = TimeSpan.Parse("06:00")
             If currentTime.TimeOfDay >= TimeSpan.Parse("21:00") OrElse currentTime.TimeOfDay < TimeSpan.Parse("06:00") Then
                 ' Time between 9 PM and 6 AM
-                Me.Text = "Welcome to The Amazing Digital Circus, " + My.Settings.Name + "!"
+                Me.Text = "Welcome to The Amazing Digital Circus, " & My.Settings.Name & "!"
                 Dim random As New Random()
                 Dim randomNumber64 As Integer = random.Next(1, 6)
 
                 Select Case randomNumber64
                     Case 1
                         Caine.Play("Uncertain")
-                        Caine.Speak("\Vol=65535\Do you ever sleep, " + My.Settings.Name + "?")
+                        Caine.Speak("\Vol=65535\Do you ever sleep, " & My.Settings.Name & "?")
                         Caine.Play("Blink")
                     Case 2
                         Caine.Play("Confused")
@@ -142,15 +142,15 @@ Public Class Form1
                         Caine.Play("Blink")
                     Case 4
                         Caine.Play("Surprised")
-                        Caine.Speak("\Vol=65535\Surprised to see you up this late, " + My.Settings.Name + "!")
+                        Caine.Speak("\Vol=65535\Surprised to see you up this late, " & My.Settings.Name & "!")
                         Caine.Play("Blink")
                     Case 5
                         Caine.Play("Uncertain")
-                        Caine.Speak("\Vol=65535\It's getting dark, " + My.Settings.Name + ". Can't it wait?")
+                        Caine.Speak("\Vol=65535\It's getting dark, " & My.Settings.Name & ". Can't it wait?")
                         Caine.Play("Blink")
                 End Select
             Else
-                Me.Text = "Welcome to The Amazing Digital Circus, " + My.Settings.Name + "!"
+                Me.Text = "Welcome to The Amazing Digital Circus, " & My.Settings.Name & "!"
 
                 Dim random As New Random()
                 Dim randomNumber As Integer = random.Next(1, 6)
@@ -166,15 +166,15 @@ Public Class Form1
                         Caine.Play("Blink")
                     Case 3
                         Caine.Play("Wave")
-                        Caine.Speak("\Vol=65535\Nice to see you again, " + My.Settings.Name + "!")
+                        Caine.Speak("\Vol=65535\Nice to see you again, " & My.Settings.Name & "!")
                         Caine.Play("Blink")
                     Case 4
                         Caine.Play("Wave")
-                        Caine.Speak("\Vol=65535\Hello, " + My.Settings.Name + "! Ready for another adventure?")
+                        Caine.Speak("\Vol=65535\Hello, " & My.Settings.Name & "! Ready for another adventure?")
                         Caine.Play("Blink")
                     Case 5
                         Caine.Play("Wave")
-                        Caine.Speak("\Vol=65535\Welcome back to the circus, " + My.Settings.Name + "! We've missed you!")
+                        Caine.Speak("\Vol=65535\Welcome back to the circus, " & My.Settings.Name & "! We've missed you!")
                         Caine.Play("Blink")
                 End Select
             End If
@@ -198,13 +198,13 @@ Public Class Form1
         Select Case randomNumber32
             Case 1
                 Caine.Play("Wave")
-                Caine.Speak("It hurts me to say goodbye, " + My.Settings.Name + ".")
+                Caine.Speak("It hurts me to say goodbye, " & My.Settings.Name & ".")
             Case 2
                 Caine.Play("Wave")
                 Caine.Speak("Until next time my friend!")
             Case 3
                 Caine.Play("Wave")
-                Caine.Speak("Until next time, " + My.Settings.Name + ".")
+                Caine.Speak("Until next time, " & My.Settings.Name & ".")
             Case 4
                 Caine.Play("Acknowledge")
                 Caine.Speak("Well, I guess I am done for today. Bye for now.")
@@ -213,7 +213,7 @@ Public Class Form1
                 Caine.Speak("It looks like my work here is done. See you later.")
             Case 6
                 Caine.Play("wave")
-                Caine.Speak("I hope to see you again soon, " + My.Settings.Name + ".")
+                Caine.Speak("I hope to see you again soon, " & My.Settings.Name & ".")
             Case 7
                 Caine.Play("Surprised")
                 Caine.Speak("Oh no! Not the exit!")
@@ -423,7 +423,7 @@ Public Class Form1
                 Caine.Speak("Ha ha! That tickles.")
             Case 14
                 Caine.Play("Uncertain")
-                Caine.Speak("What can I do for you, " + My.Settings.Name + "?")
+                Caine.Speak("What can I do for you, " & My.Settings.Name & "?")
             Case 15
                 Caine.Play("Uncertain")
                 Caine.Speak("The Circus Pals window has my interact menu.")
@@ -455,7 +455,7 @@ Public Class Form1
         Select Case randomNumber
             ' temp solution, maybe perm if it just works?
             Case 1
-                Caine.Speak("Hey " + My.Settings.Name + "! What gives?")
+                Caine.Speak("Hey " & My.Settings.Name & "! What gives?")
             Case 2
                 Caine.Speak("Excuse me?")
             Case 3
@@ -745,7 +745,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -762,7 +762,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -779,7 +779,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -796,7 +796,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -813,7 +813,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -830,7 +830,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -847,7 +847,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -864,7 +864,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -881,7 +881,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -898,7 +898,7 @@ Public Class Form1
                     Caine.Speak("Oops! Looks like one of \emp\those programs made it through!")
                     Caine.Play("DoMagic2")
                     process.Kill()
-                    Caine.Speak("I know you \emp\love your desktop buddies " + My.Settings.Name + ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
+                    Caine.Speak("I know you \emp\love your desktop buddies " & My.Settings.Name & ", but if \emp\I start losing track of who's the OG Bonzi and who's the virus-free Bonzi,")
                     Caine.Play("Uncertain")
                     Caine.Speak("Who \emp\knows what could happen...")
                     ThreatDetected.Show()
@@ -974,17 +974,17 @@ Public Class Form1
                 Exit Select
             Case 10
                 Caine.Play("Pleased")
-                Caine.Speak("You're so fun to be around, " + My.Settings.Name + "!")
+                Caine.Speak("You're so fun to be around, " & My.Settings.Name & "!")
                 Caine.Play("Blink")
                 Exit Select
             Case 11
                 Caine.Play("Wave")
-                Caine.Speak("Hey " + My.Settings.Name + ", you're looking quite nice today!")
+                Caine.Speak("Hey " & My.Settings.Name & ", you're looking quite nice today!")
                 Caine.Play("Blink")
                 Exit Select
             Case 12
                 Caine.Play("Alert")
-                Caine.Speak("" + My.Settings.Name + ", guess what! I can see people's search history!")
+                Caine.Speak("" & My.Settings.Name & ", guess what! I can see people's search history!")
                 Caine.Speak("Let me start with Jax!")
                 Caine.Play("Search")
                 Caine.Play("Surprised")
@@ -1016,7 +1016,7 @@ Public Class Form1
                 Exit Select
             Case 16
                 Caine.Play("Alert")
-                Caine.Speak("\Pit=400\" + My.Settings.Name + "? This is what I would sound like if I were only one quarter of my actual size!\rst\")
+                Caine.Speak("\Pit=400\" & My.Settings.Name & "? This is what I would sound like if I were only one quarter of my actual size!\rst\")
                 Caine.Play("Blink")
                 Exit Select
             Case 17
@@ -1041,7 +1041,7 @@ Public Class Form1
         End Select
     End Sub
     Private Sub TellJoke()
-        Dim Rnd As New Random() 
+        Dim Rnd As New Random()
 
         Select Case Rnd.Next(1, 26)
             Case 1
@@ -1256,7 +1256,7 @@ Public Class Form1
                 Caine.Speak("I tried my best on that one.")
             Case 27
                 Caine.Play("Explain")
-                Caine.Speak("What causes a massive demon hotel leak? \pau=2000\Nick the Marriage!")
+                Caine.Speak("I am a website that calls you an idiot and crashes your computer, who am I? \pau=2000\You \emp\don't know who I am!")
                 Caine.Play("Giggle")
                 Caine.Speak("It's funny because it's true!")
             Case 28
@@ -1275,7 +1275,7 @@ Public Class Form1
                 Caine.Play("Explain")
                 Caine.Speak("What do you call a snowman eating french fries at Spudsy's? \pau=2000\A \Map=""chilly-dog!""=""chilli-dog!""\")
                 Caine.Play("Blink")
-                Caine.Speak("You know " + My.Settings.Name + ", a good friend always laughs at your jokes, even if they're bad.")
+                Caine.Speak("You know " & My.Settings.Name & ", a good friend always laughs at your jokes, even if they're bad.")
             Case 31
                 Caine.Play("Explain")
                 Caine.Speak("What is Orbsman's least favorite shape? \pau=2000\Blocks!")
@@ -1435,7 +1435,7 @@ Public Class Form1
             Case 14
                 Caine.Speak("You're probably wondering how I know so much! I'm the ringmaster, duh.")
             Case 15
-                Caine.Speak("But I bet you already knew that, " + My.Settings.Name + ".")
+                Caine.Speak("But I bet you already knew that, " & My.Settings.Name & ".")
         End Select
         Caine.Play("ReadReturn")
     End Sub
@@ -1450,7 +1450,7 @@ Public Class Form1
         Caine.Play("Explain")
         Caine.Speak("From the Utility Panel, I can play any animation you want. Simply select any animation from the drop down menu and click on the play button.")
         Caine.Play("Suggest")
-        Caine.Speak("And remember " + My.Settings.Name + ", if the animation is looping, you can simply click the stop button to stop it!")
+        Caine.Speak("And remember " & My.Settings.Name & ", if the animation is looping, you can simply click the stop button to stop it!")
         Caine.Play("Blink")
     End Sub
 
@@ -1459,7 +1459,7 @@ Public Class Form1
         Caine.Play("Explain")
         Caine.Speak("From the Utility Panel, I can say anything you like. Simply enter what you would like me to say and click on the Think, Whisper, Monotone, or Speak buttons.")
         Caine.Play("Decline")
-        Caine.Speak("Oh and remember " + My.Settings.Name + ", keep it clean, cause the filter isn't working at the moment.")
+        Caine.Speak("Oh and remember " & My.Settings.Name & ", keep it clean, cause the filter isn't working at the moment.")
         Caine.Play("Acknowledge")
     End Sub
 
@@ -1484,13 +1484,13 @@ Public Class Form1
         Select Case randomNumber32
             Case 1
                 Caine.Play("Wave")
-                Caine.Speak("It hurts me to say goodbye, " + My.Settings.Name + ".")
+                Caine.Speak("It hurts me to say goodbye, " & My.Settings.Name & ".")
             Case 2
                 Caine.Play("Wave")
                 Caine.Speak("Until next time my friend!")
             Case 3
                 Caine.Play("Wave")
-                Caine.Speak("Until next time, " + My.Settings.Name + ".")
+                Caine.Speak("Until next time, " & My.Settings.Name & ".")
             Case 4
                 Caine.Play("Acknowledge")
                 Caine.Speak("Well, I guess I am done for today. Bye for now.")
@@ -1499,7 +1499,7 @@ Public Class Form1
                 Caine.Speak("It looks like my work here is done. See you later.")
             Case 6
                 Caine.Play("wave")
-                Caine.Speak("I hope to see you again soon, " + My.Settings.Name + ".")
+                Caine.Speak("I hope to see you again soon, " & My.Settings.Name & ".")
             Case 7
                 Caine.Play("Surprised")
                 Caine.Speak("Oh no! Not the exit!")
